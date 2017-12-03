@@ -85,8 +85,12 @@ public class Controller implements Initializable {
         button.setDisable(true);
         if (!creditTextFiled.getText().equals("0")) {
             creditTextFiled.setText(String.valueOf(Integer.parseInt(creditTextFiled.getText()) - 100));
-        } else return;
+        } else
 
+        {
+            text.setText("You have not any credit");
+            return;
+        }
         if (moneyTextField.getText().contains("-")) {
             text.setText("You have not money");
             return;
